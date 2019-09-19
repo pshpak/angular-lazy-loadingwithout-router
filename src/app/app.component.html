@@ -1,0 +1,20 @@
+<h1 class="container">
+  App example without router
+</h1>
+
+<div>
+  <h2>Loaded on app start:</h2>
+  <hero-loader
+    moduleName="src/app/lazy-loaded/lazy-loaded.module#LazyLoadedModule"
+  ></hero-loader>
+</div>
+
+<div>
+  <h2>
+    Toggle dynamic component <button (click)="toggleDynamic()">Toggle</button>
+  </h2>
+  <hero-loader
+    *ngIf="showDynamic"
+    moduleName="src/app/dynamic-lazy-loaded/dynamic-lazy-loaded.module#DynamicLazyLoadedModule"
+  ></hero-loader>
+</div>
